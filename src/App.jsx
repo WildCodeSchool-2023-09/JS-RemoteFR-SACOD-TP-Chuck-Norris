@@ -1,12 +1,5 @@
-import axios from "axios";
 import { useState } from "react";
-
-function getData(api, setter) {
-	axios
-		.get(api)
-		.then((response) => setter(response.data))
-		.catch((err) => console.error(err));
-}
+import getData from "./services/getData";
 
 function App() {
 	const [joke, setJoke] = useState("");
